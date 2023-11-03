@@ -113,7 +113,7 @@ La idea de este proyecto es construir una aplicación web a partir de la API [**
 ### **🖱 BASE DE DATOS**
 
 Deberás crear dos modelos para tu base de datos. Una será para los videojuegos y la otra será para los géneros (pueden llevar el nombre que tu quieras). La relación entre ambos modelos debe ser de muchos a muchos. A continuación te dejamos las propiedades que debe tener cada modelo.
-
+   
 **📍 MODELO 1 | Videogames**
 
 -  ID (deben ser distintos a los que vienen de la API). \*
