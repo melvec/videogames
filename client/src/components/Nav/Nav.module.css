@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body{
+    margin: 0;
+    padding: 0;
+  }
+  .navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #333; */
+  color: white;
+  
+  }
+  
+  .navbarlinks ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  
+  }
+  .navbarlinks li {
+  list-style: none;
+  
+  }
+  .navbarlinks li:hover {
+  background-color: #555;
+  
+  }
+  .navbarlinks li a{
+   text-decoration: none;
+   color: white;
+  padding: .6rem;
+  display: block;
+  }
+  
+  .logo img{
+   
+  
+    width: 120px;
+    height: auto;
+    padding-top: .5rem;
+  
+   
+  }
+  
+  @media (max-width: 768px) {
+    .logo img {
+      display: none;
+    }
+  }
+  
+  .searchBar{
+    display: flex;
+  
+  align-items: center;
+  justify-content: center;
+  }
+  
+  .toogleButton{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+  }
+  
+  .toogleButton .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px ;
+  }
+  
+  @media (max-width: 570px){
+    .toogleButton{
+      display: flex;
+    }
+    .navbarlinks{
+     
+      width: 100%;
+    }
+    .navbar{
+       display: block;
+      
+    }
+    .navbarlinks ul {
+      width: 100%;
+      flex-direction: column;
+      
+      }
+      .navbarlinks li{
+        text-align: center;
+      }
+      .navbarlinks li a{
+        padding: .5rem 1rem;
+      }
+      .navbarlinks.active{
+        display: flex;
+        color: blue;
+      }
+  }
+  
+  

@@ -1,0 +1,26 @@
+/* Cards.module.css */
+
+.container {
+    padding-top: 5rem;
+    padding-left: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust this value as needed */
+   
+
+  }
+  
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Adjust the width to determine the number of cards per row */
+  .card {
+    /* width: calc(25% - 10px); 4 cards per row with some spacing */
+    margin-right: 10px; /* Add spacing between cards */
+    margin-bottom: 10px; /* Add spacing between rows */
+    /* You can adjust the width and margins according to your needs */
+    /* background-color: blue; */
+  }
+  

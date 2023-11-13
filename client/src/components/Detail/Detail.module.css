@@ -1,0 +1,75 @@
+/* .cardContainer{
+flex-direction: row;
+    width: 50%;
+    border: 1rem;
+    border-radius: 10px;
+    background-color: grey;
+    color: black;
+    align-items: center;
+}
+.cardleft{
+    display: flex;
+    max-width: 70%;
+    margin-left: 0;
+}
+
+.cardright{
+    display: flex;
+    max-width: 70%;
+    margin-right: 0;
+} */
+
+/* Define styles for the Detail component */
+.cardContainer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .cardleft {
+    flex: 1;
+  }
+  
+  .cardright {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+  }
+  
+  .platforms {
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .platform {
+    margin-right: 10px;
+    padding: 5px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  

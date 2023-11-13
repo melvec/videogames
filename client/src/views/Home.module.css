@@ -1,0 +1,15 @@
+body {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    /* background-image: url("../assets/2201.jpg"); */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    background-color: white;
+    
+  
+   
+  
+  }

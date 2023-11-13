@@ -190,7 +190,7 @@ Se debe desarrollar una aplicación utilizando **React** y **Redux** que conteng
 
 <br />
 
-**📍 HOME PAGE |** la página principal de tu SPA debe contener:
+**📍 HOME PAGE |** la página principal de tu SPA debe contener: 
 
 -  SearchBar: un input de búsqueda para encontrar videojuegos por nombre.
 -  Sector en el que se vea un listado de cards con los videojuegos. Al iniciar deberá cargar los primeros resultados obtenidos desde la ruta **`GET /videogames`** y deberá mostrar su:
