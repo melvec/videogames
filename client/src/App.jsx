@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Landing from "./views/Landing";
 import Home from "./views/Home";
 import Detail from './components/Detail/Detail';
+import Form from "./components/Form/Form";
 import { useState } from 'react';
 import React, {  useEffect } from 'react';
 import axios from 'axios';
@@ -21,7 +22,7 @@ function App() {
         const response = await axios.get(apiURL, {
           params: {
             key: apiKey,
-            page_size: 15,
+            page_size: 30,
           },
         });
 
@@ -50,6 +51,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path='/home' element={<Home games={games}/>} />
           <Route path="/detail/:id" element={<Detail />} />
+          <Route path="/form" element={<Form />} />
           
         </Routes>
     </>
