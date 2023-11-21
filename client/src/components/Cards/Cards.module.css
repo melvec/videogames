@@ -5,22 +5,27 @@
     padding-left: 4rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Adjust this value as needed */
-   
+    justify-content: center; /* Adjust this value as needed */
+   align-content: center;
 
   }
   
   .items {
     display: flex;
     flex-wrap: wrap;
+    align-content: center;
+    justify-content: center; 
+
   }
   
   /* Adjust the width to determine the number of cards per row */
   .card {
+ 
     /* width: calc(25% - 10px); 4 cards per row with some spacing */
-    margin-right: 10px; /* Add spacing between cards */
-    margin-bottom: 10px; /* Add spacing between rows */
+    margin-right: 40px; /* Add spacing between cards */
+    margin-bottom: 40px; /* Add spacing between rows */
     /* You can adjust the width and margins according to your needs */
-    /* background-color: blue; */
+    background-color: rgba(0, 0, 0, 0.8);
+     border-radius: 1rem;
   }
   

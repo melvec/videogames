@@ -42,15 +42,15 @@ const fetchGamesApi = async () => {
       },
     });
 //console.log(response.data.results.genres);
-    // const gamesData = response.data.results.map((game) => ({
-    //   id: game.id,
-    //   background_image: game.background_image,
-    //   name: game.name,
-    //   genre: game.genre.id
-    // }));
+    const gamesData = response.data.results.map((game) => ({
+      id: game.id,
+      image: game.background_image,
+      name: game.name,
+     
+    }));
 
 
- const gamesData = response.data.results;
+ //const gamesData = response.data.results;
     return gamesData;
   } catch (error) {
     console.error("Error fetching games:", error);

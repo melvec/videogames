@@ -9,8 +9,8 @@ import { useState } from 'react';
 import React, {  useEffect } from 'react';
 import axios from 'axios';
 
-const apiKey = '413179f7b37044a3b53b63db111fda8c'; 
-const apiURL = 'https://api.rawg.io/api/games';
+// const apiKey = '413179f7b37044a3b53b63db111fda8c'; 
+// const apiURL = 'https://api.rawg.io/api/games';
 
 function App() {
  
@@ -19,21 +19,14 @@ function App() {
   useEffect(() => {
     async function fetchGames() {
       try {
-        const response = await axios.get(apiURL, {
-          params: {
-            key: apiKey,
-            page_size: 30,
-          },
-        });
-
-        const gamesData = response.data.results.map((game) => ({
-          id: game.id,
-          background_image: game.background_image,
-          name: game.name,
-         
-        }));
+       
+        const response = await axios.get(`http://localhost:3001/videogames`);
+        // Extract the data property from the response
+        const gamesData = response.data;
 
         setGames(gamesData);
+
+       
       } catch (error) {
         console.error('Error fetching games:', error);
       }
