@@ -32,7 +32,8 @@ module.exports = (sequelize) => {
     },
     created: {
       type: DataTypes.BOOLEAN,
-      
-    }
-  });
+    },
+  },
+  {timestamps: false} 
+  );
 };

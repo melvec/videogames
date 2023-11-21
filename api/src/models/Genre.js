@@ -5,9 +5,8 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define("Genre", {
     id: {
-      type: DataTypes.UUID,
+      type: DataTypes.STRING,
       primaryKey: true,
-      defaultValue: DataTypes.UUIDV4,
       allowNull: false,
     },
     name: {
@@ -15,5 +14,6 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
    
-  });
+  },
+  {timestamps: false} );
 };

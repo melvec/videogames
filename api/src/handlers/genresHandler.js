@@ -12,15 +12,27 @@
 //     },
 
 
+// 📍 MODELO 2 | Genres
+
+// ID. *
+// Nombre. *
+
+
+const {
+    getAllGenres,
+   
+  } = require("../controllers/genresController");
 
 const getGenresHandler = async(req, res)=>{
-   const {id,name } = req.body;
+    
    try {
-    
-
-    
+    console.log('genres shandler');
+    const { id, name } = req.body;
+    const genres = await getAllGenres(id, name);
+    res.status(200).json(genres);
+     
    } catch (error) {
-    res.status(400).json({ error: error.message });
+     res.status(400).json({ error: error.message });
    }
 }
 

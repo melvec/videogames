@@ -41,13 +41,16 @@ const fetchGamesApi = async () => {
         page_size: 30,
       },
     });
+//console.log(response.data.results.genres);
+    // const gamesData = response.data.results.map((game) => ({
+    //   id: game.id,
+    //   background_image: game.background_image,
+    //   name: game.name,
+    //   genre: game.genre.id
+    // }));
 
-    const gamesData = response.data.results.map((game) => ({
-      id: game.id,
-      background_image: game.background_image,
-      name: game.name,
-    }));
 
+ const gamesData = response.data.results;
     return gamesData;
   } catch (error) {
     console.error("Error fetching games:", error);
@@ -69,14 +72,14 @@ const getGameById = async (id, source) => {
   try {
     console.log(source);
     if (source === "api") {
-      console.log("entro a api");
+    
       const result = await fetchGamesApi();
-      console.log(result.length);
-      const gameById = result.filter((id) => result.id === id);
-      console.log(gameById.length);
+   
+      const gameById = result.filter((game) => String(game.id) === id);
+ 
       return gameById;
     } else {
-        console.log('searching by dbb');
+       
       const gameFromBDD = await Videogame.findByPk(id);
       if (gameFromBDD === null) {
         console.log("Not found!");
