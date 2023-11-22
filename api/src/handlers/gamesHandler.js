@@ -9,10 +9,15 @@ const getGamesHandler = async (req, res) => {
   const { name } = req.query;
   try {
     if (name) {
+      console.log('get games by name');
       const gameByName = await getGameByName(name);
       res.status(200).json(gameByName);
     } else {
       const response = await getAllGames();
+
+
+      console.log('all games');
+      console.log(response);
       res.status(200).json(response);
     }
   } catch (error) {
@@ -43,10 +48,13 @@ let source = ""
 };
 
 const createGameHandler = async (req, res) => {
-  const { name, image, description, plattforms, release, rating, created } =
+  console.log( req.body);
+  const { name, image, description, plattforms, release, rating, created, genreids } =
     req.body;
+  
+    
   try {
-    console.log("creating game");
+    console.log("creating game in handler");
     const response = await createVideogameDB(
       name,
       image,
@@ -54,8 +62,10 @@ const createGameHandler = async (req, res) => {
       plattforms,
       release,
       rating,
-      created
+      created,
+      genreids
     );
+    
     res.status(200).json(response);
   } catch (error) {
     res.status(400).json({ error: error.message });

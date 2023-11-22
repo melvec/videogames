@@ -11,32 +11,29 @@ const Detail = () => {
   const [game, setGame] = useState({});
   const { id } = useParams();
 
+  
   useEffect(() => {
-    async function fetchGameDetail() {
+    async function fetchGamesDetail() {
       try {
-        console.log("connecting to axios");
-        const response = await axios.get(
-          `https://api.rawg.io/api/games/${id}`,
-          {
-            params: {
-              key: apiKey,
-            },
-          }
-        );
-
-        const gameData = response.data;
-        setGame(gameData);
+       
+        const response = await axios.get(`http://localhost:3001/videogames/${id}`);
+        // Extract the data property from the response
+        const gamesData = response.data;
+        setGame(gamesData);    
       } catch (error) {
-        console.error("Error fetching game details:", error);
+        console.error('Error fetching games:', error);
       }
     }
 
-    fetchGameDetail();
+    fetchGamesDetail();
   }, [id]);
+
+
 
   return (
     <div className={style.cardContainer}>
       <div className={style.cardleft}>
+
         <h2>Game Id: {id}</h2>
         <h2>Name: {game.name}</h2>
         <h2>Released: {game.released}</h2>
@@ -55,7 +52,7 @@ const Detail = () => {
         </div>
       </div>
       <div className={style.cardright}>
-        <img src={game.background_image} alt="Game Cover" />
+        <img src={game.image} alt="Game Cover" />
       </div>
     </div>
   );
